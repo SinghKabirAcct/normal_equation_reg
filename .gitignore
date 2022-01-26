@@ -1,0 +1,8 @@
+./main.o
+./binder.o
+./main
+./.vscode/
+./.DS-Store
+./matrixInverse.o
+./matrixMult.o
+./matrixTranspose.o
