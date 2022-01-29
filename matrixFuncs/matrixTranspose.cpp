@@ -11,4 +11,5 @@ void transposeExt(float inputArr[5][5]){
 		}
     cout << "]" << endl;
 	}
+  cout << " TRANSPOSITION COMPLETE \n" << endl;
 }

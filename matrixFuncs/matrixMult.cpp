@@ -11,4 +11,5 @@ void multExt(float inputArr[5][5], int multiplier){
 	  }
     cout << "]" << endl;
   }
+  cout << "MULTIPLICATION COMPLETE" << endl;
 }
