@@ -20,4 +20,15 @@ void inverseExt(float inputArr[5][5]){
         }
         cout << "]" << endl;
     }
+    for(int i=1; i<5; i++){
+        if(inputArr[i][0] != 0){
+            cout << "[";
+            float subtractVal = inputArr[i][0]/inputArr[0][0];
+            for(int j=0; j<5; j++){
+                inputArr[i][j] = inputArr[i][j] - (subtractVal*inputArr[0][j]);
+                cout << inputArr[i][j] << ", ";
+            }
+            cout << "]" << endl;
+        }
+    }
 };
