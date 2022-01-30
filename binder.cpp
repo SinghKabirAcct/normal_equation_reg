@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-  float inputArray[5][5] = {
+  double inputArray[5][5] = {
     {7, 2, 3, 4, 5},
     {2, 2, 2, 3, 17},
 	  {1, 1, 5, 6, 8},
