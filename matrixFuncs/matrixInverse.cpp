@@ -3,13 +3,6 @@
 using namespace std;
 
 void inverseExt(double inputArr[5][5]){
-    /*double identityMatr[5][5] = {
-        {1, 0, 0, 0, 0},
-        {0, 1, 0, 0, 0},
-        {0, 0, 1, 0, 0},
-        {0, 0, 0, 1, 0},
-        {0, 0, 0, 0, 1}
-    };*/
     for(int i=0; i<5; i++){
         if(inputArr[0][0] != 1){
             double zeroVal = inputArr[0][0];
