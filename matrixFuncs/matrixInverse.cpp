@@ -45,7 +45,7 @@ void inverseExt(float inputArr[5][5]){
                 inputArr[2][i] = inputArr[2][i] * (1/zeroVal);
             }
         }
-        if(inputArr[i][1] != 0 && i != 1){
+        if(inputArr[i][2] != 0 && i != 2){
             float subtractVal = inputArr[i][2]/inputArr[2][2];
             for(int j=0; j<5; j++){
                 inputArr[i][j] = inputArr[i][j] - (subtractVal*inputArr[2][j]);
