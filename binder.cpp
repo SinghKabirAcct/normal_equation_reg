@@ -11,5 +11,12 @@ int main(){
 	  {6, 7, 8, 10, 23}
   };
   inverseExt(inputArray);
+  for(int i = 0; i<5; i++){
+    cout << "[";
+    for(int j = 0; j<5; j++){
+      cout << inputArray[i][j] << ", ";
+    }
+    cout << "]" << endl;
+  }
   return 0;
 }
