@@ -17,11 +17,11 @@ int main(){
 	  {0, 0, 0, 1, 0},
     {0, 0, 0, 0, 1}
   };
-  inverseExt(inputArray, invTemplate);
+  multTwoMatricesExt(inputArray, invTemplate);
   for(int i = 0; i<5; i++){
     cout << "[";
     for(int j = 0; j<5; j++){
-      cout << invTemplate[i][j] << ", ";
+      cout << inputArray[i][j] << ", ";
     }
     cout << "]" << endl;
   }
