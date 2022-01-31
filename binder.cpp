@@ -10,11 +10,18 @@ int main(){
 	  {9, 10, 11, 13, 7},
 	  {6, 7, 8, 10, 23}
   };
-  inverseExt(inputArray);
+  double invTemplate[5][5] = {
+    {1, 0, 0, 0, 0},
+    {0, 1, 0, 0, 0},
+	  {0, 0, 1, 0, 0},
+	  {0, 0, 0, 1, 0},
+    {0, 0, 0, 0, 1}
+  };
+  inverseExt(inputArray, invTemplate);
   for(int i = 0; i<5; i++){
     cout << "[";
     for(int j = 0; j<5; j++){
-      cout << inputArray[i][j] << ", ";
+      cout << invTemplate[i][j] << ", ";
     }
     cout << "]" << endl;
   }

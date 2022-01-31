@@ -20,8 +20,8 @@ binder.o: binder.cpp linker.h
 matrixTranspose.o: matrixFuncs/matrixTranspose.cpp linker.h
 	$(CC) $(CFLAGS) -c matrixFuncs/matrixTranspose.cpp
 
-matrixMult.o: matrixFuncs/matrixMult.cpp linker.h
-	$(CC) $(CFLAGS) -c matrixFuncs/matrixMult.cpp
+matrixMult.o: matrixFuncs/matrixNumMult.cpp linker.h
+	$(CC) $(CFLAGS) -c matrixFuncs/matrixNumMult.cpp
 
 matrixInverse.o: matrixFuncs/matrixInverse.cpp linker.h
 	$(CC) $(CFLAGS) -c matrixFuncs/matrixInverse.cpp
