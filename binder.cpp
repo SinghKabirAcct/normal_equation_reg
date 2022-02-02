@@ -18,12 +18,20 @@ int main(){
     {0, 0, 0, 0, 1}
   };
   double newArr[5][5];
-  transposeExt(inputArray);
-  multTwoMatricesExt(invTemplate, inputArray, newArr);
+  double transposedArr[5][5];
+  for(int i=0; i<5; i++){
+    for(int j=0; j<5; j++){
+      transposedArr[i][j] = inputArray[i][j];
+    }
+  }
+  transposeExt(transposedArr);
+  multTwoMatricesExt(inputArray, transposedArr, newArr);
+  inverseExt(newArr, invTemplate);
+  multTwoMatricesExt(invTemplate, transposedArr, newArr);
   for(int i = 0; i<5; i++){
     cout << "[";
     for(int j = 0; j<5; j++){
-      cout << newArr[i][j] << ", ";
+      cout << invTemplate[i][j] << ", ";
     }
     cout << "]" << endl;
   }
