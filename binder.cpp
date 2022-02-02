@@ -24,14 +24,16 @@ int main(){
     {1, 2, 7, 8, 10},
     {1, 19, 27, 31, 22}
   };
-  double newArr[5][5];
   double transposedArr[5][5];
   for(int i=0; i<5; i++){
     for(int j=0; j<5; j++){
       transposedArr[i][j] = inputArray[i][j];
     }
   }
-  
+  double transTimesInputArr[5][5];
+  double inverseResult[5][5];
+  transposeExt(inputArray, transposedArr);
+  multTwoMatricesExt(transposedArr, inputArray, transTimesInputArr);
   for(int i = 0; i<5; i++){
     cout << "[";
     for(int j = 0; j<5; j++){
