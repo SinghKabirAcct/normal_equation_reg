@@ -2,7 +2,14 @@
 #include "linker.h"
 using namespace std;
 
+void prompts(){
+  cout << "Welcome to the Claire Normal Equation Calculator that replaces gradient desecent analytically" << endl;
+  cout << endl;
+  cout << "This process will start with the creation of your input. Please enter the values for each line and seperate the values by commas and a space, make sure to use 5 numbers per index." << endl;
+  cout << "Index 1 of Input" << endl;
+}
 int main(){
+  prompts();
   double inputArray[5][5] = {
     {0, 7, 5, 4, 4},
     {2, 2, 7, 8, 9},
