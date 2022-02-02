@@ -34,6 +34,7 @@ int main(){
   double inverseResult[5][5];
   transposeExt(inputArray, transposedArr);
   multTwoMatricesExt(transposedArr, inputArray, transTimesInputArr);
+  inverseExt(transTimesInputArr, inverseResult);
   for(int i = 0; i<5; i++){
     cout << "[";
     for(int j = 0; j<5; j++){
