@@ -11,11 +11,11 @@ int main(){
     {1, 19, 27, 31, 22}
   };
   double results[5][5] = {
-    {0, 7, 5, 4, 4},
-    {2, 2, 7, 8, 9},
-    {1, 90, 11, 43, 32},
-    {1, 2, 7, 8, 10},
-    {1, 19, 27, 31, 22}
+    {100000000, 3, 6, 4, 4},
+    {2, 2, 4, 8, 9},
+    {1, 9, 1, 56, 32},
+    {1, 21, 7, 98, 10},
+    {1, 190, 27, 31, 22}
   };
   double transposedArr[5][5];
   for(int i=0; i<5; i++){
@@ -36,6 +36,7 @@ int main(){
   for(int i = 0; i<5; i++){
     cout << "[";
     for(int j = 0; j<5; j++){
+      string tempVal = to_string(finalResult[i][j]);
       cout << finalResult[i][j] << ", ";
     }
     cout << "]" << endl;
