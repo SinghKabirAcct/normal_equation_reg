@@ -39,6 +39,7 @@ int main(){
   inverseExt(transTimesInputArr, inverseResult);
   multTwoMatricesExt(inverseResult, transposedArr, inverseTimesTransposed);
   multTwoMatricesExt(inverseTimesTransposed, results, finalResult);
+  multToStripMatr();
 
   for(int i = 0; i<5; i++){
     cout << "[";

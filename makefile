@@ -10,7 +10,7 @@ CFLAGS = -Wall -g
 # Targets needed to bring the executable up to date
  
 main: matrixInverse.o matrixToMatrixMult.o matrixTranspose.o binder.o
-	$(CC) $(CFLAGS) -o main matrixInverse.o matrixTranspose.o matrixToMatrixMult.o binder.o
+	$(CC) $(CFLAGS) -o main matrixInverse.o matrixTranspose.o matrixToMatrixMult.o binder.o multToMatrixStrip.o
 
 # The main.o target can be written more simply
  
@@ -22,6 +22,9 @@ matrixTranspose.o: matrixFuncs/matrixTranspose.cpp linker.h
 
 matrixToMatrixMult.o: matrixFuncs/matrixToMatrixMult.cpp linker.h
 	$(CC) $(CFLAGS) -c matrixFuncs/matrixToMatrixMult.cpp
+
+multToMatrixStrip.o: matrixFuncs/multToMatrixStrip.cpp linker.h
+	$(CC) $(CFLAGS) -c matrixFuncs/multToMatrixStrip.cpp
 
 matrixInverse.o: matrixFuncs/matrixInverse.cpp linker.h
 	$(CC) $(CFLAGS) -c matrixFuncs/matrixInverse.cpp
