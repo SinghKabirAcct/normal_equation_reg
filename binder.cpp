@@ -10,13 +10,6 @@ int main(){
     {1, 2, 7, 8, 10},
     {1, 19, 27, 31, 22}
   };
-  double invTemplate[5][5] = {
-    {1, 0, 0, 0, 0},
-    {0, 1, 0, 0, 0},
-    {0, 0, 1, 0, 0},
-    {0, 0, 0, 1, 0},
-    {0, 0, 0, 0, 1}
-  };
   double results[5][5] = {
     {0, 7, 5, 4, 4},
     {2, 2, 7, 8, 9},
@@ -32,13 +25,18 @@ int main(){
   }
   double transTimesInputArr[5][5];
   double inverseResult[5][5];
+  double inverseTimesTransposed[5][5];
+  double finalResult[5][5];
   transposeExt(inputArray, transposedArr);
   multTwoMatricesExt(transposedArr, inputArray, transTimesInputArr);
   inverseExt(transTimesInputArr, inverseResult);
+  multTwoMatricesExt(inverseResult, transposedArr, inverseTimesTransposed);
+  multTwoMatricesExt(inverseTimesTransposed, results, finalResult);
+
   for(int i = 0; i<5; i++){
     cout << "[";
     for(int j = 0; j<5; j++){
-      cout << invTemplate[i][j] << ", ";
+      cout << finalResult[i][j] << ", ";
     }
     cout << "]" << endl;
   }
