@@ -11,13 +11,14 @@ int main(){
     {1, 19, 27, 31, 22}
   };
   double invTemplate[5][5] = {
-    {9, 7, 5, 0, 0},
-    {0, 0, 7, 8, 9},
-    {0, 0, 11, 43, 32},
-    {0, 0, 7, 8, 10},
-    {0, 0, 27, 31, 22}
+    {1, 0, 0, 0, 0},
+    {0, 1, 0, 0, 0},
+    {0, 0, 1, 0, 0},
+    {0, 0, 0, 1, 0},
+    {0, 0, 0, 0, 1}
   };
   double newArr[5][5];
+  transposeExt(inputArray);
   multTwoMatricesExt(invTemplate, inputArray, newArr);
   for(int i = 0; i<5; i++){
     cout << "[";
