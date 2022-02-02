@@ -4,24 +4,25 @@ using namespace std;
 
 int main(){
   double inputArray[5][5] = {
-    {7, 2, 3, 4, 5},
-    {2, 2, 2, 3, 17},
-	  {1, 1, 5, 6, 8},
-	  {9, 10, 11, 13, 7},
-	  {6, 7, 8, 10, 23}
+    {0, 7, 5, 4, 4},
+    {2, 2, 7, 8, 9},
+    {1, 90, 11, 43, 32},
+    {1, 2, 7, 8, 10},
+    {1, 19, 27, 31, 22}
   };
   double invTemplate[5][5] = {
-    {1, 1, 0, 0, 0},
-    {0, 1, 0, 0, 0},
-	  {0, 0, 1, 0, 0},
-	  {0, 0, 0, 1, 0},
-    {0, 0, 0, 0, 1}
+    {9, 7, 5, 0, 0},
+    {0, 0, 7, 8, 9},
+    {0, 0, 11, 43, 32},
+    {0, 0, 7, 8, 10},
+    {0, 0, 27, 31, 22}
   };
-  multTwoMatricesExt(inputArray, invTemplate);
+  double newArr[5][5];
+  multTwoMatricesExt(invTemplate, inputArray, newArr);
   for(int i = 0; i<5; i++){
     cout << "[";
     for(int j = 0; j<5; j++){
-      cout << inputArray[i][j] << ", ";
+      cout << newArr[i][j] << ", ";
     }
     cout << "]" << endl;
   }
